@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.StudentsListPage"
+             Title="List of Registered Students">
+
+    <StackLayout>
+        
+        
+            <!-- Additional Headers -->
+            <Grid Padding="10" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*" BackgroundColor="#D6D6D6">
+                <Label Text="ID" Grid.Column="0" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Full Name" Grid.Column="1" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Date Of Birth" Grid.Column="2" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Gender" Grid.Column="3" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Adress" Grid.Column="4" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Country" Grid.Column="5" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Nationality" Grid.Column="6" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Program of Study" Grid.Column="7" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Level of Study" Grid.Column="8" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Email" Grid.Column="9" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Mobile Number" Grid.Column="10" FontAttributes="Bold" TextColor="Black"/>
+                <!-- Adjust other column headers as needed -->
+            </Grid>    
+
+
+        <CollectionView x:Name="studentsCollectionView" ItemsSource="{Binding}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*">
+                        <Label Text="{Binding StudentId}" Grid.Column="0" />
+                        <Label Text="{Binding FullName}" Grid.Column="1" /> 
+                        <Label Text="{Binding DateOfBirth, StringFormat='{0:MM/dd/yyyy}'}" Grid.Column="2" />
+                        <Label Text="{Binding Gender}" Grid.Column="3" />
+                        <Label Text="{Binding Address}" Grid.Column="4" />
+                        <Label Text="{Binding Country}" Grid.Column="5" />
+                        <Label Text="{Binding Nationality}" Grid.Column="6" />
+                        <Label Text="{Binding ProgramOfStudy}" Grid.Column="7" />
+                        <Label Text="{Binding LevelOfStudy}" Grid.Column="8" />
+                        <Label Text="{Binding Email}" Grid.Column="9" />
+                        <Label Text="{Binding MobilePhone}" Grid.Column="10" />
+                       
+                        
+                        <!-- Edit Button -->
+                            <Button Text="Edit" Grid.Column="11" CommandParameter="{Binding}" Clicked="OnEditClicked"/>
+
+                        <!-- Delete Button -->
+                            <Button Text="Delete" Grid.Column="12" BackgroundColor="#D9534F" TextColor="White" CommandParameter="{Binding}" Clicked="OnDeleteClicked"/>
+                   
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

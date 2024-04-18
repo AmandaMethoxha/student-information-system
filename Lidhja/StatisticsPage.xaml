@@ -1,0 +1,84 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.StatisticsPage">
+
+    <VerticalStackLayout >
+
+        <!-- Header -->
+           <StackLayout BackgroundColor="#522CD5" 
+                     Padding="40"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Start">
+            <Label Text=" Students Statistics"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   TextColor="White"/>
+           </StackLayout>
+
+
+
+        <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="100">
+        <!-- Buttons Grid -->
+        <Grid RowDefinitions="Auto, Auto" 
+              ColumnDefinitions="*, *" 
+              RowSpacing="10" 
+              ColumnSpacing="10">
+            <!-- Row 0 -->
+            <Button Text="Gender Statistics" 
+                    Clicked="OnGenderStatisticsClicked" 
+                    BackgroundColor="#0ABAB5" 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    FontSize="40"
+                    WidthRequest="530"
+                    HeightRequest="250"
+                    Padding="10"
+                    Margin="10"
+                    CornerRadius="100"/>
+
+
+            <Button Text="Nationality Statistics" 
+                    Clicked="OnNationalityStatisticsClicked" 
+                    BackgroundColor="#522CD5" 
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                    FontSize="40"
+                    WidthRequest="530"
+                    HeightRequest="250"
+                    CornerRadius="100"/>
+
+            <!-- Row 1 -->
+            <Button Text="Program of Study Statistics" 
+                    Clicked="OnProgramOfStudyStatisticsClicked" 
+                    BackgroundColor="#522CD5" 
+                    Grid.Row="1" 
+                    Grid.Column="0"
+                    FontSize="40"
+                    WidthRequest="530"
+                    HeightRequest="250"
+                    CornerRadius="100"/>
+
+            <Button Text="Level of Study Statistics" 
+                    Clicked="OnLevelOfStudyStatisticsClicked" 
+                    BackgroundColor="#0ABAB5" 
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                    FontSize="40"
+                    WidthRequest="530"
+                    HeightRequest="250"
+                    CornerRadius="100"/>
+        </Grid>
+        </Grid>
+
+        <!-- Label to Display Statistics -->
+        <Label x:Name="statisticsLabel" 
+               FontSize="30" 
+               TextColor="Black"
+               BackgroundColor="#0ABAB5"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+                   Padding="40"
+                    Margin="10"/>
+    </VerticalStackLayout>
+</ContentPage>

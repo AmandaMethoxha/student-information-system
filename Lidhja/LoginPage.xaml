@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.LoginPage">
+
+    <VerticalStackLayout Spacing="20" Padding="0">
+        
+        <!-- Title Section -->
+        <StackLayout BackgroundColor="#522CD5" 
+                     Padding="40"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Start">
+            <Label Text="Welcome to Methoxha University"
+                   FontSize="45"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   TextColor="White"/>
+        </StackLayout>
+
+        <!-- Greeting Section -->
+        <StackLayout Padding="50" HorizontalOptions="Center" VerticalOptions="Start">
+            <Label Text="Greetings, Please Login to your Account"
+                   FontSize="40"
+                   HorizontalOptions="Center"
+                   TextColor="#522CD5"/>
+        </StackLayout>
+
+        <!-- Login Form Section -->
+<StackLayout Padding="30" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+    <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto" RowSpacing="10" ColumnSpacing="10">
+        <!-- Username Row -->
+        <Label Grid.Column="0" Text="Username:" FontSize="Large" VerticalOptions="Center" />
+        <Entry Grid.Column="1" x:Name="UsernameEntry" Placeholder="Enter Username" FontSize="Large" HeightRequest="60" />
+
+        <!-- Password Row -->
+        <Label Grid.Column="0" Text="Password:" FontSize="Large" VerticalOptions="Center" Grid.Row="1" />
+        <Entry Grid.Column="1" x:Name="PasswordEntry" Placeholder="Enter Password" IsPassword="True" FontSize="Large" HeightRequest="60" Grid.Row="1" />
+
+        <!-- Login Button -->
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Text="Login" Clicked="OnLoginClicked" FontSize="Large" HeightRequest="60" Margin="0,20,0,0" Grid.Row="2" />
+    </Grid>
+</StackLayout>
+
+        <!-- Footer Section -->
+        <StackLayout Padding="50" HorizontalOptions="Center" VerticalOptions="End">
+            <Label Text="If you are not a Staff Member but wish to log in as a Student, please navigate back to the home page."
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

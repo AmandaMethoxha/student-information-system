@@ -1,0 +1,24 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.StaffDashboardPage">
+
+    <!-- Title Section -->
+    <VerticalStackLayout Spacing="20" Padding="0">
+        <StackLayout BackgroundColor="#522CD5" 
+                     Padding="40"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Start">
+            <Label Text="Staff Dashboard" FontSize="45" HorizontalOptions="Center" TextColor="White"/>
+        </StackLayout>
+
+
+
+        <!-- Buttons Section -->
+        <StackLayout Padding="150" VerticalOptions="Center" HorizontalOptions="Center">
+            <Button x:Name="StudentButton" Text="Student Management" WidthRequest="500" HeightRequest="100" Margin="10" FontSize="30" Clicked="OnStudentButtonClicked" />
+            <Button x:Name="StudentProgressButton" Text="Student Progress" WidthRequest="500" HeightRequest="100" Margin="10" FontSize="30" Clicked="OnStudentProgresButtonClicked" />
+            <Button x:Name="StatisticsButton" Text="View Statistics" WidthRequest="500" HeightRequest="100" Margin="10" FontSize="30" Clicked="OnStatisticsButtonClicked" />
+            <Button Text="Logout" WidthRequest="250" HeightRequest="50" Margin="10" BackgroundColor="#D9534F" TextColor="White" FontSize="20" Clicked="OnLogoutButtonClicked"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

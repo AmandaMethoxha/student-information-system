@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.LandingPage">
+             
+       
+
+    <VerticalStackLayout >
+        <StackLayout BackgroundColor="#522CD5" 
+                     Padding="40"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Start">
+            <Label Text=" Methoxha Student Information System"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   TextColor="White"/>
+        </StackLayout>
+
+
+        
+        <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="200">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="35"/> <!-- Space between buttons -->
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Button for Staff -->
+            <Button Text="Staff" Clicked="OnStaffButtonClicked"
+                    Grid.Column="0"
+                    FontSize="80"
+                    WidthRequest="550"
+                    HeightRequest="340"
+                    Padding="10"
+                    Margin="10"
+                    CornerRadius="100"
+                    TextColor="White" />
+
+            <!-- Button for Student -->
+            <Button Text="Student" Clicked="OnStudentButtonClicked"
+                    Grid.Column="2"
+                    FontSize="80"
+                    WidthRequest="550"
+                    HeightRequest="340"
+                    Padding="10"
+                    Margin="10"
+                    CornerRadius="100"
+                    BackgroundColor="#28a745"
+                    TextColor="White" />
+        </Grid>
+
+        <!-- Additional Information -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Padding="-50">
+            <!-- Weather Information -->
+            <Label Text="Sunny, 3°C" FontSize="Medium" TextColor="DarkSlateGray"/>
+
+                        <!-- Contact Information -->
+            <Label Text="info@methoxha.ac.uk" FontSize="Medium" TextColor="DarkSlateGray" Padding="100,0"/>
+
+            <!-- Location Information -->
+            <Label Text="London, UK" FontSize="Medium" TextColor="DarkSlateGray"/>
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

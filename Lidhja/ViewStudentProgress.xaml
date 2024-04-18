@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.ViewStudentProgress"
+             Title="View Student Progress">
+
+    <CollectionView x:Name="studentprogressesCollectionView">
+        <CollectionView.Header>
+            <Grid Padding="10"  ColumnDefinitions="*,*,*,*,*,*,*,*,*,*" BackgroundColor="#D6D6D6">
+           <!-- Adjust the background color as needed -->
+                <Label Text="ID" Grid.Column="0" FontAttributes="Bold"/>
+                <Label Text="Full Name" Grid.Column="1" FontAttributes="Bold"/>
+                <Label Text="Course" Grid.Column="2" FontAttributes="Bold"/>
+                <Label Text="Grade" Grid.Column="3" FontAttributes="Bold"/>
+                <Label Text="Notes" Grid.Column="4" FontAttributes="Bold"/>
+                <Label Text="Level of Study" Grid.Column="5" FontAttributes="Bold"/>
+                <Label Text="Program of Study" Grid.Column="6" FontAttributes="Bold"/>
+                <Label Text="Email" Grid.Column="7" FontAttributes="Bold"/>
+                <!-- Add more headers as needed -->
+            </Grid>
+        </CollectionView.Header>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*">
+                    <Label Text="{Binding StudentId}" Grid.Column="0" />
+                    <Label Text="{Binding FullName}" Grid.Column="1" />
+                    <Label Text="{Binding Course}" Grid.Column="2" />
+                    <Label Text="{Binding Grade}" Grid.Column="3" />
+                    <Label Text="{Binding Notes}" Grid.Column="4" />
+                    <Label Text="{Binding LevelOfStudy}" Grid.Column="5" />
+                    <Label Text="{Binding ProgramOfStudy}" Grid.Column="6" />
+                    <Label Text="{Binding Email}" Grid.Column="7" />
+                    <!-- Add more elements as needed -->
+
+                    <!-- Add Edit and Delete Buttons -->
+                   <Button Text="Edit" Grid.Column="8" CommandParameter="{Binding}" Clicked="OnEditClicked"/>
+                    <Button Text="Delete" Grid.Column="9" CommandParameter="{Binding}" BackgroundColor="#D9534F" Clicked="OnDeleteClicked"/>
+                
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>

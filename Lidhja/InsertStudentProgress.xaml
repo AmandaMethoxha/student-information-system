@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.InsertStudentProgress"
+             Title="Insert Student Progress">
+
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="20">
+            <Entry x:Name="studentIdEntry" Placeholder="Student ID" Keyboard="Numeric"/>
+            <Entry x:Name="fullNameEntry" Placeholder="Full Name"/>
+            <Entry x:Name="courseEntry" Placeholder="Course"/>
+            <Entry x:Name="gradeEntry" Placeholder="Grade"/>
+            <Editor x:Name="notesEditor" Placeholder="Notes" HeightRequest="100"/>
+            <Button Text="Save Progress" Clicked="OnSaveProgressClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

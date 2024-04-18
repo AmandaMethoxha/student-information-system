@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.StudentDetailsPage"
+             Title="Student Details">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30">
+            
+            <!-- Welcome Message -->
+            <Label x:Name="welcomeLabel" FontSize="24" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+
+            <!-- Grid Layout for Two Columns -->
+            <Grid RowSpacing="10" ColumnSpacing="20">
+                <!-- Column Definitions -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Personal Information Column -->
+                <VerticalStackLayout Grid.Column="0">
+                    <Label Text="Personal Information" BackgroundColor="#28a745" FontSize="30" FontAttributes="Bold"/>
+                    <Label x:Name="emailLabel" Text="Email:"/>
+                    <Label x:Name="birthdayLabel" Text="Birthday:"/>
+                    <Label x:Name="genderLabel" Text="Gender:"/>
+                    <Label x:Name="addressLabel" Text="Address:"/>
+                    <Label x:Name="countryLabel" Text="Country:"/>
+                    <Label x:Name="nationalityLabel" Text="Nationality:"/>
+                </VerticalStackLayout>
+
+                <!-- Program Information Column -->
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="Program Information" BackgroundColor="#28a745" FontSize="30" FontAttributes="Bold"/>
+                    <Label x:Name="levelOfStudyLabel" Text="Level of Study:"/>
+                    <Label x:Name="programOfStudyLabel" Text="Program of Study:"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Progress Information -->
+            <Label Text="Progress Information" BackgroundColor="#28a745"  FontSize="30" FontAttributes="Bold"/>
+            <Label x:Name="courseLabel" Text="Course:"/>
+            <Label x:Name="gradeLabel" Text="Grade:"/>
+            <Label x:Name="notesLabel" Text="Notes:"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

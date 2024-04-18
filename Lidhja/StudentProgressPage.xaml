@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.StudentProgressPage"
+             Title="Student Progress">
+
+    <VerticalStackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+        
+        <!-- Insert Student Progress Button -->
+        <Button x:Name="InsertStudentProgressButton" 
+                Text="Insert Student Progress" 
+                Clicked="OnInsertStudentProgressClicked" 
+                 BackgroundColor="#0ABAB5" 
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="34"
+                WidthRequest="550"
+                HeightRequest="230"
+                CornerRadius="100"/>
+
+        <!-- View Student Progress Button -->
+        <Button x:Name="ViewStudentProgressButton" 
+                Text="View Student Progress" 
+                Clicked="OnViewStudentProgressClicked" 
+                BackgroundColor="#0ABAB5" 
+                TextColor="Black"
+                FontSize="34"
+                FontAttributes="Bold"
+                WidthRequest="550"
+                HeightRequest="230"
+                CornerRadius="100"/>
+        
+    </VerticalStackLayout>
+</ContentPage>
