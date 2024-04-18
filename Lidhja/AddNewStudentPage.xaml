@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.AddNewStudentPage"
+             Title="Add New Student">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            <!-- Name Fields -->
+            <Entry x:Name="firstNameEntry" Placeholder="First Name" />
+            <Entry x:Name="lastNameEntry" Placeholder="Last Name" />
+
+            <!-- ID -->
+            <Entry x:Name="idEntry" Placeholder="ID" Keyboard="Numeric" />
+
+            <!-- Date of Birth -->
+             <Label Text="Date of Birth" />
+            <DatePicker x:Name="dobPicker" />
+
+            <!-- Gender -->
+            <Label Text="Gender" />
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="maleRadioButton" Content=" Male" GroupName="gender"/>
+                <RadioButton x:Name="femaleRadioButton" Content=" Female" GroupName="gender"/>
+                <RadioButton x:Name="otherRadioButton" Content=" Other" GroupName="gender"/>
+            </StackLayout>
+
+
+            <!-- Email -->
+            <Entry x:Name="emailEntry" Placeholder="Email" Keyboard="Email" />
+
+            <!-- Mobile Phone -->
+            <Entry x:Name="mobilePhoneEntry" Placeholder="Mobile Phone" Keyboard="Telephone" />
+
+            <!-- Address -->
+            <Entry x:Name="addressEntry" Placeholder="Address" />
+
+            <!-- Nationality -->
+            <Label Text="Nationality" />
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="InternationalRadioButton" Content="International" GroupName="nationality"/>
+                <RadioButton x:Name="NationalRadioButton" Content="National" GroupName="nationality"/>
+            </StackLayout>
+
+            <!-- Country -->
+            <Entry x:Name="countryEntry" Placeholder="Country" />
+
+
+            <!-- Level of Study -->
+            <Label Text="Level of Study" />
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="UndergraduateRadioButton" Content=" Undergraduate " GroupName="levelOfStudy"/>
+                <RadioButton x:Name="GraduateRadioButton" Content=" Graduate" GroupName="levelOfStudy"/>
+                <RadioButton x:Name="PostgraduateRadioButton" Content=" Postgraduate" GroupName="levelOfStudy"/>
+            </StackLayout>
+
+
+            <!-- Program of Study -->
+            <Label Text="Program of Study" />
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="ComputerScienceRadioButton" Content=" Computer Science " GroupName="programOfStudy"/>
+                <RadioButton x:Name="CyberSecurityRadioButton" Content=" Cyber Security" GroupName="programOfStudy"/>
+                <RadioButton x:Name="GamesProgrammingRadioButton" Content=" Games Programming" GroupName="programOfStudy"/>
+                <RadioButton x:Name="CreativeComputingRadioButton" Content=" Creative Computing" GroupName="programOfStudy"/>
+            </StackLayout>
+
+
+
+            <!-- Submit Button -->
+            <Button Text="Add Student" Clicked="OnAddStudentClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
