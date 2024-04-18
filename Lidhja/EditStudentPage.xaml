@@ -1,0 +1,94 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.EditStudentPage"
+             Title="Edit Student Information">
+
+    <ScrollView>
+        <Grid Padding="20" RowSpacing="10" ColumnSpacing="20" ColumnDefinitions="Auto, *">
+<Grid.RowDefinitions>
+    <RowDefinition Height="Auto" /> <!-- Row for ID -->
+    <RowDefinition Height="Auto" /> <!-- Row for Full Name -->
+    <RowDefinition Height="Auto" /> <!-- Additional row for Last Name -->
+    <RowDefinition Height="Auto" /> <!-- Row for Date of Birth -->
+    <RowDefinition Height="Auto" /> <!-- Row for Gender -->
+    <RowDefinition Height="Auto" /> <!-- Row for Email -->
+    <RowDefinition Height="Auto" /> <!-- Row for Mobile Phone -->
+    <RowDefinition Height="Auto" /> <!-- Row for Address -->
+    <RowDefinition Height="Auto" /> <!-- Row for Nationality -->
+    <RowDefinition Height="Auto" /> <!-- Row for Country -->
+    <RowDefinition Height="Auto" /> <!-- Row for Level of Study -->
+    <RowDefinition Height="Auto" /> <!-- Row for Program of Study -->
+    <RowDefinition Height="Auto" /> <!-- Row for Save Changes button -->
+    <RowDefinition Height="Auto" /> <!-- Row for Cancel button -->
+</Grid.RowDefinitions>
+            <!-- ID Field -->
+            <Label Text="ID" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
+            <Entry x:Name="idEntry" Placeholder="ID" Text="{Binding StudentId}" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
+
+            <!-- Full Name Fields -->
+            <Label Text="Full Name" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"/>
+            <Entry x:Name="firstNameEntry" Placeholder="First Name" Text="{Binding FirstName}" Grid.Row="1" Grid.Column="1"/>
+            <Entry x:Name="lastNameEntry" Placeholder="Last Name" Text="{Binding LastName}" Grid.Row="2" Grid.Column="1"/>
+
+            <!-- Date of Birth -->
+            <Label Text="Date of Birth" Grid.Row="3" Grid.Column="0" FontAttributes="Bold"/>
+            <DatePicker x:Name="dobPicker" Date="{Binding DateOfBirth}" Grid.Row="3" Grid.Column="1"/>
+
+            <!-- Gender -->
+            <Label Text="Gender" Grid.Row="4" Grid.Column="0" FontAttributes="Bold"/>
+            <StackLayout x:Name="genderRadioGroup" Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+                <!-- Radio buttons here -->
+                <RadioButton x:Name="maleRadioButton" Content="Male" GroupName="gender"/>
+                <RadioButton x:Name="femaleRadioButton" Content="Female" GroupName="gender"/>
+                <RadioButton x:Name="otherRadioButton" Content="Other" GroupName="gender"/>
+            </StackLayout>
+
+            <!-- Email -->
+            <Label Text="Email" Grid.Row="5" Grid.Column="0" FontAttributes="Bold"/>
+            <Entry x:Name="emailEntry" Placeholder="Email" Text="{Binding Email}" Keyboard="Email" Grid.Row="5" Grid.Column="1"/>
+
+            <!-- Mobile Phone -->
+            <Label Text="Mobile Phone" Grid.Row="6" Grid.Column="0" FontAttributes="Bold"/>
+            <Entry x:Name="mobilePhoneEntry" Placeholder="Mobile Phone" Text="{Binding MobilePhone}" Keyboard="Telephone" Grid.Row="6" Grid.Column="1"/>
+
+            <!-- Address -->
+            <Label Text="Address" Grid.Row="7" Grid.Column="0" FontAttributes="Bold"/>
+            <Entry x:Name="addressEntry" Placeholder="Address" Text="{Binding Address}" Grid.Row="7" Grid.Column="1"/>
+
+            <!-- Nationality -->
+            <Label Text="Nationality" Grid.Row="8" Grid.Column="0" FontAttributes="Bold"/>
+            <StackLayout x:Name="nationalityRadioGroup" Orientation="Horizontal" Grid.Row="8" Grid.Column="1">
+                <!-- Radio buttons here -->
+                <RadioButton x:Name="nationalRadioButton" Content="National" GroupName="nationality"/>
+                <RadioButton x:Name="internationalRadioButton" Content="International" GroupName="nationality"/>
+            </StackLayout>
+
+            <!-- Country -->
+            <Label Text="Country" Grid.Row="9" Grid.Column="0" FontAttributes="Bold"/>
+            <Entry x:Name="countryEntry" Placeholder="Country" Text="{Binding Country}" Grid.Row="9" Grid.Column="1"/>
+
+            <!-- Level of Study -->
+            <Label Text="Level of Study" Grid.Row="10" Grid.Column="0" FontAttributes="Bold"/>
+            <StackLayout x:Name="levelOfStudyRadioGroup" Orientation="Horizontal" Grid.Row="10" Grid.Column="1">
+                <!-- Radio buttons here -->
+                <RadioButton x:Name="undergraduateRadioButton" Content="Undergraduate" GroupName="levelOfStudy"/>
+                <RadioButton x:Name="graduateRadioButton" Content="Graduate" GroupName="levelOfStudy"/>
+                <RadioButton x:Name="postgraduateRadioButton" Content="Postgraduate" GroupName="levelOfStudy"/>
+            </StackLayout>
+
+            <!-- Program of Study -->
+            <Label Text="Program of Study" Grid.Row="11" Grid.Column="0" FontAttributes="Bold"/>
+            <StackLayout x:Name="programOfStudyRadioGroup" Orientation="Horizontal" Grid.Row="11" Grid.Column="1">
+                <!-- Radio buttons here -->
+                 <RadioButton x:Name="computerScienceRadioButton" Content="Computer Science" GroupName="ProgramOfStudy"/>
+                <RadioButton x:Name="cyberSecurityRadioButton" Content="Cyber Security" GroupName="ProgramOfStudy"/>
+                <RadioButton x:Name="gamesProgrammingRadioButton" Content="Games Programming" GroupName="ProgramOfStudy"/>
+                <RadioButton x:Name="creativeComputingRadioButton" Content="Creative Computing" GroupName="ProgramOfStudy"/>
+            </StackLayout>
+
+            <!-- Buttons -->
+            <Button Text="Save Changes" Clicked="OnSaveClicked" Grid.Row="12" Grid.ColumnSpan="2"/>
+            <Button Text="Cancel" Clicked="OnCancelClicked" Grid.Row="13" BackgroundColor="#D9534F" TextColor="White" Grid.ColumnSpan="2"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

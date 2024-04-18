@@ -1,0 +1,14 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lidhja.EditStudentProgressPage">
+
+    <StackLayout Padding="20">
+        <Entry x:Name="fullNameEntry" Placeholder="Full Name" Text="{Binding FullName}"/>
+        <Entry x:Name="courseEntry" Placeholder="Course" Text="{Binding Course}"/>
+        <Entry x:Name="gradeEntry" Placeholder="Grade" Text="{Binding Grade}"/>
+        <Editor x:Name="notesEditor" Placeholder="Notes" Text="{Binding Notes}"/>
+
+        <Button Text="Save" Clicked="OnSaveClicked"/>
+        <Button Text="Cancel" BackgroundColor="#D9534F" Clicked="OnCancelClicked"/>
+    </StackLayout>
+</ContentPage>
